@@ -1,24 +1,33 @@
-package com.inheritance;
+package com.encapsulation;
+import java.util.Scanner;
 
-//Person(name,id,city)
-//Employee(name,city,sal)(inherit person)
-//Student(name,roll_no,dept)(inherit employee class)
-//Take input from user scanner
+
 public class Person
 {
-  
-  
-  String name;
-  int id;
-  String city;
-  public void person_info(String name, int id, String city)
-  {
-	System.out.println(name+ " "+id+ " "+city);
-  }
- 
-  
+	private int age;
+	private void printAge(int age)
+	{
+		if(age>=24)
+		{
+			  System.out.println("You are eligible");
+		}
+		else
+		{
+			System.out.println("you are not eligible");
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter your age:- ");
+		int age = sc.nextInt();
+		
+		Person p1 = new Person();
+		p1.printAge(age);
+		
+
+	}
 
 }
- 
-  
-  
+
